@@ -1,4 +1,4 @@
-module github.com/seu-usuario/stress-test
+module github.com/SaraPMC/stress-test
 
 go 1.21
 
