@@ -71,7 +71,7 @@ O relatório final contém:
 
 ```bash
 # Clonar repositório
-git clone https://github.com/SaraPMC/stress-test.git
+git clone https://github.com/SaraPMC/GO-desafio-stress-test.git
 cd stress-test
 
 # Baixar dependências

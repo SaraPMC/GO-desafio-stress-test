@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/SaraPMC/stress-test/cmd"
+	"github.com/SaraPMC/GO-desafio-stress-test/cmd"
 )
 
 func main() {
