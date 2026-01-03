@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"net/http"
+	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -77,7 +78,7 @@ func executeStressTest() *Report {
 
 	var wg sync.WaitGroup
 	requestsChan := make(chan struct{}, concurrency)
-	resultsChan := make(chan RequestResult, 100)
+	resultsChan := make(chan RequestResult, requests)
 	var totalDuration int64
 
 	// Goroutine para coletar resultados
@@ -102,12 +103,12 @@ func executeStressTest() *Report {
 	}()
 
 	// Iniciar workers
+	wg.Add(concurrency)
 	for i := 0; i < concurrency; i++ {
 		go worker(requestsChan, resultsChan, &wg)
 	}
 
-	// Enviar requisições
-	wg.Add(requests)
+	// Enviar requisições em uma goroutine separada
 	go func() {
 		for i := 0; i < requests; i++ {
 			requestsChan <- struct{}{}
@@ -115,6 +116,7 @@ func executeStressTest() *Report {
 		close(requestsChan)
 	}()
 
+	// Aguardar conclusão dos workers
 	wg.Wait()
 	close(resultsChan)
 
@@ -127,13 +129,13 @@ func executeStressTest() *Report {
 }
 
 func worker(requestsChan <-chan struct{}, resultsChan chan<- RequestResult, wg *sync.WaitGroup) {
+	defer wg.Done()
+
 	client := &http.Client{
 		Timeout: 30 * time.Second,
 	}
 
 	for range requestsChan {
-		defer wg.Done()
-
 		startTime := time.Now()
 		resp, err := client.Get(url)
 		duration := time.Since(startTime)
@@ -156,9 +158,10 @@ func worker(requestsChan <-chan struct{}, resultsChan chan<- RequestResult, wg *
 }
 
 func printReport(report *Report) {
-	fmt.Println("\n" + "="*60)
+	separator := strings.Repeat("=", 60)
+	fmt.Println("\n" + separator)
 	fmt.Println("📋 RELATÓRIO DE TESTE DE CARGA")
-	fmt.Println("="*60 + "\n")
+	fmt.Println(separator + "\n")
 
 	fmt.Printf("⏱️  Tempo total: %v\n", report.TotalTime)
 	fmt.Printf("📊 Total de requests: %d\n", report.TotalRequests)
@@ -184,5 +187,5 @@ func printReport(report *Report) {
 	fmt.Printf("\n📊 Taxa de requisições por segundo: %.2f req/s\n",
 		float64(report.TotalRequests)/report.TotalTime.Seconds())
 
-	fmt.Println("\n" + "="*60 + "\n")
+	fmt.Println("\n" + separator + "\n")
 }

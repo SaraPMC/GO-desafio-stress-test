@@ -1,14 +1,10 @@
-github.com/inconshreveable/log15 v2.3.2-0.20221130130101-bbee803d2d3f+incompatible h1:9CaR5f7bYQRmFPvXCRnxM+GZHE0k7p6kAm9X8p7eyk=
-github.com/inconshreveable/log15 v2.3.2-0.20221130130101-bbee803d2d3f+incompatible/go.mod h1:log15v2.3.2/go.mod v0.0.0-20221130130101-bbee803d2d3f
-github.com/inconshreveable/log15/v2 v2.3.2 h1:6c8/JvXrJmT/AvCdqPpCKbVN5FJhj2V1KWZD9tBRM=
-github.com/inconshreveable/log15/v2 v2.3.2/go.mod h1:2Y8fXKPmjQx2E7PDQL8J4Xiv4r3N8cGLvj6P1fy3g=
-github.com/mattn/go-colorable v0.1.13 h1:fFA4WZxvqWfeaoeNmWys3WeYFwtLvzlMWI2Fg3x7+c=
-github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBchK7nzYZZbiZd++KSscKL9DSIbNnWA8=
-github.com/mattn/go-isatty v0.0.16 h1:bq3VjFmv/sOjHtdEhmkEV4i5/CqyP7EwIwwqubZge0=
-github.com/mattn/go-isatty v0.0.16/go.mod h1:kYGgaQfpe5nmZ5Ry0MB89SV0ZsUf+DKwsScZ2EA7ns=
-github.com/spf13/cobra v1.8.0 h1:7aJaZx1Fn4XywgmuEwQkNq9ZNUo6t6W294nakwDtQw=
-github.com/spf13/cobra v1.8.0/go.mod h1:WwCsrwPVly3f5zl7MmwicQ3I4Drr5ywtkq5P32Y08I=
-github.com/spf13/pflag v1.0.5 h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JI=
-github.com/spf13/pflag v1.0.5/go.mod h1:McXfInJRrz4CZtVVygUZUwW94rh8BDjKSRWførVfcQ=
-golang.org/x/sys v0.0.0-20221010170243-f3edfcdc9c81 h1:X8J9p28P+G7F2KvVf0o3wk1VBGUU5j0GRzKLWwAhAI=
-golang.org/x/sys v0.0.0-20221010170243-f3edfcdc9c81/go.mod h1:oPkhp1MjuhygsvLlLjL/8NWWY7aRiDC2QVro5AjwvQ=
+github.com/cpuguy83/go-md2man/v2 v2.0.3/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
+github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
+github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
+github.com/russross/blackfriday/v2 v2.1.0/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
+github.com/spf13/cobra v1.8.0 h1:7aJaZx1B85qltLMc546zn58BxxfZdR/W22ej9CFoEf0=
+github.com/spf13/cobra v1.8.0/go.mod h1:WXLWApfZ71AjXPya3WOlMsY9yMs7YeiHhFVlvLyhcho=
+github.com/spf13/pflag v1.0.5 h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
+github.com/spf13/pflag v1.0.5/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
