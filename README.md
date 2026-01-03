@@ -282,35 +282,3 @@ docker run stress-test:latest \
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## 👨‍💻 Contribuindo
-
-Contribuições são bem-vindas! Por favor:
-
-1. Faça um Fork do repositório
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
----
-
-## ❓ FAQ
-
-**P: Qual é o máximo de requisições que posso fazer?**
-R: Não há limite fixo, depende dos recursos do seu sistema e da URL testada.
-
-**P: Posso testar URLs internas/localhost?**
-R: Sim, absolutamente. Use `http://localhost:8080` ou o IP interno.
-
-**P: Como saber se meu serviço aguenta a carga?**
-R: Se 90% das requisições retornam 200 e a latência é aceitável, seu serviço está bem.
-
-**P: O Docker é obrigatório?**
-R: Não, você pode compilar e rodar localmente com Go instalado.
-
----
-
-**Desenvolvido com ❤️ em Go**
